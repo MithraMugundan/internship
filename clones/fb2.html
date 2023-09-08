@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <label for="">UserName</label>
+        <input type="text" id="mith" placeholder="Enter your username">
+        <label for="">Password</label>
+        <input type="password" id="p" placeholder="Enter your password">
+        <label for=""></label>
+        <input type="submit" name="submit" id="submit">
+    </form>
+    <script>
+        document.getElementById("submit").addEventListener("click",action);
+        let user=document.getElementById("mith");
+        let pass=document.getElementById("p");
+        function action(){
+            if (user.value=="Mithra" && pass.value=="123"){
+                alert("Valid User");
+            }
+            else{
+                alert("Invalid User");
+
+            }
+
+        }
+    </script>
+    
+</body>
+</html>

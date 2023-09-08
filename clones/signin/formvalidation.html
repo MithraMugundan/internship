@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styless.css">
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <title>Form Validation using JavaScript</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Registration Form</h2>
+        </div>
+        <form action="" id="form">
+            <div class="form-group">
+                <label for="">UserName : </label>
+                <input type="text" placeholder="username" id = "username" autocomplete="on">
+                <span></span>
+            </div>
+            <div class="form-group">
+                <label for="">Email : </label>
+                <input type="text" placeholder="email" id = "email" autocomplete="on">
+                <span></span>
+            </div>
+            <div class="form-group">
+                <label for="">Phone Number : </label>
+                <input type="text" placeholder="phonenumber" id = "phonenumber" autocomplete="on">
+                <span></span>
+            </div>
+            <div class="form-group">
+                <label for="">Password : </label>
+                <input type="password" placeholder="password" id = "password" autocomplete="off">
+                <span></span>
+            </div>
+            <div class="form-group">
+                <label for="">Confirm Password : </label>
+                <input type="password" placeholder="confirm password" id = "confirmpassword" autocomplete="off">
+                <span></span>
+            </div>
+            <button id = 'submit'>Submit</button>
+        </form>
+    </div>
+    <script>
+        function validateform(event){
+            event.preventDefault();
+            const fullname=document.getElementById("username");
+            const email=document.getElementById("email");
+            const phone=document.getElementById("phonenumber");
+            const pswd=document.getElementById("password");
+            const cpswd=document.getElementById("confirmpassword");
+            var name=fullname.value;
+            var mail=email.value;
+            var phonen=phone.value;
+            var ps=pswd.value;
+            var cps=cpswd.value;
+            if(name==""){
+                alert("please enter your name");
+                return;
+            }
+            if(mail==""){
+                alert("please enter your mail");
+                return;
+            }            
+            if(phonen==""){
+                alert("please enter your phoneno");
+            }
+            if(ps==""){
+                alert("please enter your password");
+                return;
+            }
+            if(cps==""){
+                alert("please enter your  password again");
+                return;
+            }
+            if(ps!=cps){
+                alert("check password");
+                return;
+
+            }
+            alert("Form submitted");
+        }
+        document.getElementById("form").addEventListener("submit",validateform);
+
+
+    </script>
+</body>
+</html>

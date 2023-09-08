@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Grading System</title>
+</head>
+<body>
+<h3>Grading System</h3>
+<script type ="text/javascript">
+    var marks=[25, 65, 46, 98, 78, 65];
+    var max_marks = marks.length * 100;
+    var total = 0;
+    var grade = 0;
+    for (let i = 0; i < marks.length; i++) {
+        total += marks[i];//377
+    }
+    let percentage= ((total) / max_marks) * 100;
+    if (percentage >= 90) {
+        grade = 'A';
+    }
+    else {
+        if (percentage >= 80 && percentage <= 89) {
+            grade = 'B';
+        }
+        else {
+            if (percentage >= 60 && percentage <= 79) {
+                grade = 'C';
+            }
+            else{
+                if (percentage >= 33 && percentage <= 59){
+                    grade = 'D';
+                }
+                else {
+                    grade = 'F';
+                }
+            }
+        }
+    }
+    document.write(grade);
+
+</script>

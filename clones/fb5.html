@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="ans"></p>
+    <form>
+        <label>Input1</label>
+        <input type="number" placeholder="Enter a value" id="a"><br>
+        <label>Input2</label>
+        <input type="number" placeholder="Enter b value" id="b"><br>
+        <button onclick="add()">+</button><br>
+        <button  onclick="sub()">-</button><br>
+        <button onclick="mul()">*</button><br>
+        <button  onclick="div()">/</button><br>
+    </form>
+    <script>     
+        function add(){
+            var a=document.getElementById('a').value;
+            a=parseInt(a);
+            var b=document.getElementById('b').value;
+            b=parseInt(b);
+            var c=a+b;
+            alert(document.getElementById('ans').innerHTML);
+        }
+        function sub(){
+            var a=document.getElementById('a').value;
+            a=parseInt(a);
+            var b=document.getElementById('b').value;
+            b=parseInt(b);
+            var d=a-b;
+            var b1=document.getElementById('ans').innerHTML=" Subtracted vvalue is"+d;
+            alert(b1);
+        }
+        function mul(){
+            var a=document.getElementById('a').value;
+            a=parseInt(a);
+            var b=document.getElementById('b').value;
+            b=parseInt(b);
+            var e=a*b;
+            var c1=document.getElementById('ans').innerHTML="Product is"+e;
+            alert(c1);
+        }
+        function div(){
+            var a=document.getElementById('a').value;
+            a=parseInt(a);
+            var b=document.getElementById('b').value;
+            b=parseInt(b);
+            var f=a/b;
+            var d1=document.getElementById('ans').innerHTML="Quotient is"+f;
+            document.write(d1);
+        }
+</script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: white;
+}
+.content {
+    padding: 50px;
+    border:10px;
+    background-color: gray;
+    font-family: Helvetica;
+    color: black;
+    margin: 20px ;
+    width: 400px;
+}
+ 
+ 
+ div {
+     position: relative;
+     background-color: gray;
+     border: 10px solid blue;
+     width: 50%;
+ }
